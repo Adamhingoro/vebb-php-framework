@@ -1,0 +1,5 @@
+RewriteEngine On
+ErrorDocument 404 /panel/Error/NotFound
+RewriteRule ^panel/([^/]*)$ /index.php?path=$1 [L]
+RewriteRule ^panel/([^/]*)/([^/]*)$ /index.php?path=$1&action=$2 
+RewriteRule ^panel/([^/]*)/([^/]*)/([^/]*)$ /index.php?path=$1&action=$2&parameter=$3 [L]
